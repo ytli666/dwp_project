@@ -89,6 +89,17 @@
         </div>
 
         <form action="submit-article.php" method="POST">
+            <!--Choose category-->
+            <div class="form-group">
+                <label for="category">分類</label>
+                <select id="category" name="category"required>
+                    <option value="Technology">Technology</option>
+                    <option value="Health">Health</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Entertainment">Entertainment</option>
+                </select>
+            </div>
+            
             <!-- Article Title -->
             <div class="form-group">
                 <label for="title">標題</label>
