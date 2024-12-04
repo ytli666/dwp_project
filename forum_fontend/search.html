@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Search Results</title>
+    <style>
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .result-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-list li {
+            background-color: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-list li h3 a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        .result-list li h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            color: #4CAF50;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        .pagination a:hover {
+            background-color: #f4f4f9;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">討論區</div><!--這裡可以換成別的名字-->
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="#">個人資料</a><!--這裡的個人資料可以考慮放用戶名-->
+            <a href="#">登出</a>
+            <!--
+            <a href="#">登入</a>
+            <a href="#">註冊</a>根據是否登入顯示不同的選項
+            -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>搜尋結果</h1>
+        <p><strong>"Artificial Intelligence"</strong>相關內容: </p>
+
+        <ul class="result-list">
+            <!-- Repeat this structure for each article -->
+            <li>
+                <h3><a href="article1.html">The Latest Advancements in AI Technology</a></h3>
+                <p>Artificial intelligence has come a long way...</p>
+            </li>
+            <!-- Example ends -->
+        </ul>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#">&laquo; 上一頁</a>
+            <a href="?page=1" class="active">1</a>
+            <a href="?page=2">2</a>
+            <a href="?page=3">3</a>
+            <a href="#">&raquo; 下一頁</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 討論區
+    </footer>
+</body>
+</html>

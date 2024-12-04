@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>討論區名稱-文章名稱</title><!--這裡可以放 討論區名稱-文章名稱 -->
+    <style>
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-title {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        .article-content {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .comments-section {
+            margin-top: 30px;
+        }
+
+        .comments-section h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .comment {
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .comment .author {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .comment-form {
+            margin-top: 20px;
+        }
+
+        .comment-form textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            margin-bottom: 10px;
+        }
+
+        .comment-form button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .comment-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">討論區</div><!--這裡可以換成別的名字-->
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="#">個人資料</a><!--這裡的個人資料可以考慮放用戶名-->
+            <a href="#">登出</a>
+            <!--
+            <a href="#">登入</a>
+            <a href="#">註冊</a>根據是否登入顯示不同的選項
+            -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="article-title">The Latest Advancements in AI Technology</h1>
+        <div class="article-content">
+            <p>Artificial intelligence has come a long way in recent years, with advancements in machine learning, natural language processing, and computer vision. These technologies are now being applied in a wide range of industries, from healthcare to entertainment.</p>
+            <p>In this article, we explore some of the most exciting developments in AI and what they mean for the future.</p>
+        </div>
+
+        <div class="comments-section">
+            <h2>評論</h2>
+            <div class="comment">
+                <div class="author">Alice</div>
+                <div class="text">This article is very insightful! AI is truly changing the world.</div>
+            </div>
+            <div class="comment">
+                <div class="author">Bob</div>
+                <div class="text">I found the part about machine learning particularly fascinating. Great read!</div>
+            </div>
+
+            <div class="comment-form">
+                <h3>留下評論</h3>
+                <form>
+                    <textarea placeholder="在這裡寫下你的評論..." required></textarea>
+                    <button type="submit" name="comment">發表評論</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 討論區
+    </footer>
+</body>
+</html>

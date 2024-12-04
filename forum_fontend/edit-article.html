@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>上傳/編輯文章</title>
+    <style>
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h1 {
+            color: #4CAF50;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 200px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #45a049;
+        }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .form-footer p {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">討論區</div><!--這裡可以換成別的名字-->
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="#">個人資料</a><!--這裡的個人資料可以考慮放用戶名-->
+            <a href="#">登出</a>
+            <!--
+            <a href="#">登入</a>
+            <a href="#">註冊</a>根據是否登入顯示不同的選項
+            -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-header">
+            <h1>上傳/編輯文章</h1>
+        </div>
+
+        <form action="submit-article.php" method="POST">
+            <!-- Article Title -->
+            <div class="form-group">
+                <label for="title">標題</label>
+                <input type="text" id="title" name="title" placeholder="Enter the article title" required>
+            </div>
+
+            <!-- Article Content -->
+            <div class="form-group">
+                <label for="content">內容</label>
+                <textarea id="content" name="content" placeholder="Write your article here..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">提交文章</button>
+            </div>
+            <div class="form-group">
+                <button type="submit">取消</button><!--這裡應該回上一頁或回首頁-->
+            </div>
+        </form>
+
+        <div class="form-footer">
+            <p>如果您正在編輯現有文章，請進行必要的更改，然後按一下「提交文章」。</p>
+        </div>
+    </div>
+</body>
+</html>

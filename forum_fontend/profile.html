@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>個人資料</title>
+    <style>
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-header h1 {
+            color: #4CAF50;
+        }
+
+        .profile-info {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .profile-info p {
+            margin: 10px 0;
+        }
+
+        .profile-info .edit-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .profile-info .edit-button:hover {
+            background-color: #45a049;
+        }
+
+        .article-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .article-list li {
+            background-color: white;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex; /* 將 <li> 轉為彈性容器 */
+            justify-content: space-between; /* 讓內容兩側對齊 */
+            align-items: center; /* 垂直居中 */
+            flex-wrap: wrap;
+        }
+
+        .article-list li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .article-list li a:hover {
+            color: #4CAF50;
+        }
+
+        .article-list .button-group {
+            display: flex; /* 彈性佈局，讓按鈕排成橫向 */
+            gap: 10px; /* 按鈕之間的間距 */
+        }
+
+        .article-list .edit-button {
+            display: inline-block;
+            align-items: flex-end;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .article-list .edit-button:hover {
+            background-color: #45a049;
+            color: white;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            color: #4CAF50;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+
+        .pagination a:hover {
+            background-color: #f4f4f9;
+        }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">討論區</div><!--這裡可以換成別的名字-->
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="#">個人資料</a><!--這裡的個人資料可以考慮放用戶名-->
+            <a href="#">登出</a>
+            <!--
+            <a href="#">登入</a>
+            <a href="#">註冊</a>根據是否登入顯示不同的選項
+            -->
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="profile-header">
+            <h1>個人資料</h1>
+        </div>
+
+        <div class="profile-info">
+            <p><strong>名字:</strong> Elon Musk</p>
+            <p><strong>電子信箱:</strong> elon.musk@example.com</p>
+            <p><strong>自我介紹:</strong></br> Hi, I am Iron Man.</p>
+            <a href="edit-profile.html" class="edit-button">修改個人資料</a>
+        </div>
+
+        <h2>你的文章</h2>
+        <ul class="article-list">
+            <li><a href="#">How to learn JavaScript effectively</a>
+                <div class="button-group">
+                    <button class="edit-button">刪除</button>
+                    <button class="edit-button">編輯</button>
+                </div>
+            </li>
+            <li><a href="#">10 Tips for a healthier lifestyle</a>
+                <div class="button-group">
+                    <button class="edit-button">刪除</button>
+                    <button class="edit-button">編輯</button>
+                </div>
+            </li>
+            <li><a href="#">The latest advancements in AI technology</a>
+                <div class="button-group">
+                    <button class="edit-button">刪除</button>
+                    <button class="edit-button">編輯</button>
+                </div>
+            </li>
+        </ul>
+        <div class="pagination">
+            <a href="#">&laquo; 上一頁</a>
+            <a href="profile.html?page=1" class="active">1</a>
+            <a href="profile.html?page=2">2</a>
+            <a href="profile.html?page=3">3</a>
+            <a href="#">&raquo; 下一頁</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 討論區
+    </footer>
+</body>
+</html>
